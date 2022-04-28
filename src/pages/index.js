@@ -1,31 +1,48 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import MicrosoftLogin from "react-microsoft-login"
+// import Layout from "../components/layout"
+// import Seo from "../components/seo"
+import { MsalProvider } from "@azure/msal-react";
+import { Configuration,  PublicClientApplication } from "@azure/msal-browser";
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["auto", "webp", "avif"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link> <br />
-      <Link to="/using-ssr">Go to "Using SSR"</Link> <br />
-      <Link to="/using-dsg">Go to "Using DSG"</Link>
-    </p>
-  </Layout>
-)
+// const configuration = {
+//   auth: {
+//       clientId: "1d5088f9-2914-47e9-bc37-87f3de4b2cde"
+//   }
+// };
+
+// const pca = new PublicClientApplication(configuration);
+const IndexPage = () => {
+  const authHandler = (err, data) => {
+    console.log(err, data)
+  }
+
+  const clientId = "1d5088f9-2914-47e9-bc37-87f3de4b2cde";
+
+  return (
+    <nav
+      style={{
+        display: "flex",
+        padding: "20px",
+        borderBottom: "1px solid blue",
+      }}
+    >
+       {/* <MsalProvider instance={pca}>
+       <h4 style={{}}>Stock Trade</h4>
+       </MsalProvider> */}
+     
+      <div style={{ float: "right", padding: "20px" }}>
+        <MicrosoftLogin clientId={clientId} authCallback={authHandler} />
+      </div>
+    </nav>
+  )
+
+  // <Layout>
+  //   <Seo title="Home" />
+  //   Hi Arch Neo Team 1
+
+  // </Layout>
+}
 
 export default IndexPage
