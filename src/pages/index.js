@@ -2,8 +2,8 @@ import * as React from "react"
 import MicrosoftLogin from "react-microsoft-login"
 // import Layout from "../components/layout"
 // import Seo from "../components/seo"
-import { MsalProvider } from "@azure/msal-react";
-import { Configuration,  PublicClientApplication } from "@azure/msal-browser";
+// import { MsalProvider } from "@azure/msal-react";
+// import { Configuration,  PublicClientApplication } from "@azure/msal-browser";
 
 
 // const configuration = {
