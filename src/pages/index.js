@@ -8,30 +8,32 @@ const IndexPage = () => {
     console.log(err, data)
   }
 
-  const clientId = "1d5088f9-2914-47e9-bc37-87f3de4b2cde";
+  const clientId = "8c1ce88c-c0a0-4cc5-837f-baed7baf91ef";
 
   return (
-    <nav
-      style={{
-        display: "flex",
-        padding: "20px",
-        borderBottom: "1px solid blue",
-      }}
-    >
+
      <Layout>
-       <Seo title="Home"/>
-      <div style={{ float: "right", padding: "20px" }}>
-        <MicrosoftLogin clientId={clientId} authCallback={authHandler} />
-      </div>
-      </Layout>
-    </nav>
+    <Seo title="Home" />
+    Hi Arch Neo Team 1
+    <MicrosoftLogin clientId={clientId} authCallback={authHandler} />
+  </Layout>
+    // <nav
+    //   style={{
+    //     display: "flex",
+    //     padding: "20px",
+    //     borderBottom: "1px solid blue",
+    //   }}
+    // >
+    //  <Layout>
+    //    <Seo title="Home"/>
+    //   <div style={{ float: "right", padding: "20px" }}>
+       
+    //   </div>
+    //   </Layout>
+    // </nav>
   )
 
-  // <Layout>
-  //   <Seo title="Home" />
-  //   Hi Arch Neo Team 1
-
-  // </Layout>
+ 
 }
 
 export default IndexPage
