@@ -21,7 +21,7 @@ const IndexPage = () => {
       {msalInstance && <button onClick={logoutHandler}>Logout</button>}
       {!msalInstance && (
         <MicrosoftLogin
-          clientId={"8c1ce88c-c0a0-4cc5-837f-baed7baf91ef"}
+          clientId={"955997a3-35fa-4058-9dc8-7e087c8143f5"}
           authCallback={loginHandler}
         />
       )}
