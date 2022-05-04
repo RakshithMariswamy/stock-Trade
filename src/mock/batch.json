@@ -1,0 +1,55 @@
+{
+    "batchInfo" : [
+        {
+            "batchId": "0001",
+            "batchNumber": "10_04_2022_01",
+            "date": "09-04-22",
+            "time":"9.30 AM",
+            "status": true
+        },
+        {
+            "batchId": "0002",
+            "batchNumber": "10_04_2022_01",
+            "date": "09-04-22",
+            "time":"10.30 AM",
+            "status": true
+        },
+        {
+            "batchId": "0003",
+            "batchNumber": "10_04_2022_01",
+            "date": "09-04-22",
+            "time":"11.30 AM",
+            "status": true
+        },
+        {
+            "batchId": "0004",
+            "batchNumber": "10_04_2022_01",
+            "date": "09-04-22",
+            "time":"12.30 PM",
+            "status": false
+        },
+        {
+            "batchId": "0005",
+            "batchNumber": "10_04_2022_01",
+            "date": "09-04-22",
+            "time":"1.30 PM",
+            "status": true
+        },
+        {
+            "batchId": "0006",
+            "batchNumber": "10_04_2022_01",
+            "date": "09-04-22",
+            "time":"2.30 PM",
+            "status": false
+        },
+        {
+            "batchId": "0001",
+            "batchNumber": "10_04_2022_01",
+            "date": "09-04-22",
+            "time":"3.30 PM",
+            "status": true
+        }
+
+
+    ] 
+}

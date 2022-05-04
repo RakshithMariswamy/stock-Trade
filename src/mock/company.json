@@ -1,0 +1,38 @@
+{
+    "companyInfo" : [
+      {
+          "name" : "Apple",
+          "cmpShort": "AAPL",
+          "pValue": "$2.775 T",
+          "pStat": "2.23%",
+          "cLogo": "https://1000logos.net/wp-content/uploads/2019/06/Apple-Logo-100x63.jpg",
+          "fav": true
+      },
+      {
+        "name" : "Microsoft",
+        "cmpShort": "MFST",
+        "pValue": "$2.775 T",
+        "pStat": "1.47%",
+        "cLogo": "https://yt3.ggpht.com/ytc/AKedOLRWrisdne6s62jFSEqac07vG0wP_XT5m7hawTUHTA=s176-c-k-c0x00ffffff-no-rj",
+        "fav": true
+    },
+    {
+        "name" : "Google",
+        "cmpShort": "ALPHA",
+        "pValue": "$9.775 B",
+        "pStat": "0.17%",
+        "cLogo": "https://cdn.icon-icons.com/icons2/2699/PNG/512/google_tile_logo_icon_170069.png",
+        "fav": false
+    },
+    {
+        "name" : "Amazon",
+        "cmpShort": "AMZN",
+        "pValue": "$99.775 B",
+        "pStat": "3.17%",
+        "cLogo": "https://scontent.fblr4-3.fna.fbcdn.net/v/t1.6435-9/128008893_102621075039706_6722804550333589665_n.png?stp=dst-png_p240x240&_nc_cat=111&ccb=1-5&_nc_sid=dd9801&_nc_ohc=Hujdj3-0wq8AX-k254E&_nc_ht=scontent.fblr4-3.fna&oh=00_AT-TollaL2aCJ8wLQ332l835enBsU71kH9fSR24j4kX1lg&oe=6297027C",
+        "fav": true
+    }
+
+
+    ] 
+}
