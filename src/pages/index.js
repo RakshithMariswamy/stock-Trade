@@ -23,7 +23,7 @@ const IndexPage = () => {
         <div>
           <Header
             siteTitle="Stock Trade"
-            userName="Rakshith"
+            userName={msalInstance?.account?.userName}
             isLogedIn={msalInstance}
             logoutHandler={logoutHandler}
           />
