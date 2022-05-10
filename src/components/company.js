@@ -1,5 +1,5 @@
 import React from "react"
-import PreferenceComponent from "../components/Preference"
+import PreferenceComponent from "../components/preference"
 import { Container, Row, Col } from "react-bootstrap"
 import CardComponent from "../components/card"
 import CompanyMock from "../mock/company.json"

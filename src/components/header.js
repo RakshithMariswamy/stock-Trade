@@ -1,6 +1,5 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import "../layout"
 import { Navbar, Container, Button } from "react-bootstrap"
 import { FcPositiveDynamic } from "react-icons/fc"
 

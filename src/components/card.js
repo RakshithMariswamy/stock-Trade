@@ -1,5 +1,5 @@
 import React from "react"
-import { Card, Container, Row, Col } from "react-bootstrap"
+import { Card, Row, Col } from "react-bootstrap"
 import { AiFillStar } from "react-icons/ai"
 import { AiOutlineStar } from "react-icons/ai"
 
@@ -17,7 +17,7 @@ const CardComponent = props => {
              <b>{company?.name}</b> 
               <div>{company?.cmpShort}</div>
             </Col>
-            <img src={company?.cLogo} className="smallImage" width="100px" />
+            <img src={company?.cLogo} alt="logo" className="smallImage" width="100px" />
             <Col sm={6}>{company?.pValue}</Col>
             <Col sm={6} className="statColor" >{company?.pStat}</Col>
           </Row>
