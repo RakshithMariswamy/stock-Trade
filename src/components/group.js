@@ -1,5 +1,5 @@
 import React from "react"
-import PreferenceComponent from '../components/Preference'
+import PreferenceComponent from './preference'
 
 const GroupComponent = props => {
   return (

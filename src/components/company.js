@@ -1,7 +1,7 @@
 import React from "react"
-import PreferenceComponent from "../components/preference"
+import PreferenceComponent from "./preference"
 import { Container, Row, Col } from "react-bootstrap"
-import CardComponent from "../components/card"
+import CardComponent from "./card"
 import CompanyMock from "../mock/company.json"
 
 const CompanyComponent = props => {
