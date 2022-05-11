@@ -643,6 +643,8 @@ pre tt:after {
 .batch-table-head {
   background-color: #4863a0 !important;
   color:white !important;
+  border: 1px solid #4863a0;
+  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
 }
 
 .config-header .accordion-button:not(.collapsed) {

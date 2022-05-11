@@ -1,0 +1,168 @@
+{
+  "groupInfo": [
+    {
+      "name": "Banking Trade",
+      "pValue": 3.3,
+      "totalType": "T",
+      "pStat": "2.23%",
+      "fav": false,
+      "groupDescription": "Banking Portfolio",
+      "companyInfo": [
+        {
+          "name": "Apple",
+          "cmpShort": "AAPL",
+          "pValue": "$2.775 T",
+          "pStat": "2.23%",
+          "cLogo": "https://1000logos.net/wp-content/uploads/2019/06/Apple-Logo-100x63.jpg",
+          "fav": true
+        },
+        {
+          "name": "Microsoft",
+          "cmpShort": "MFST",
+          "pValue": "$2.775 T",
+          "pStat": "1.47%",
+          "cLogo": "https://yt3.ggpht.com/ytc/AKedOLRWrisdne6s62jFSEqac07vG0wP_XT5m7hawTUHTA=s176-c-k-c0x00ffffff-no-rj",
+          "fav": true
+        },
+        {
+          "name": "Google",
+          "cmpShort": "ALPHA",
+          "pValue": "$9.775 B",
+          "pStat": "0.17%",
+          "cLogo": "https://pbs.twimg.com/profile_images/1455185376876826625/s1AjSxph_400x400.jpg",
+          "fav": false
+        }
+      ]
+    },
+    {
+      "name": "Insurance Trade",
+      "pValue": 1.3,
+      "totalType": "T",
+      "pStat": "-0.13%",
+      "fav": true,
+      "groupDescription": "Insurance Portfolio",
+      "companyInfo": [
+        {
+          "name": "Google",
+          "cmpShort": "ALPHA",
+          "pValue": "$9.775 B",
+          "pStat": "0.17%",
+          "cLogo": "https://pbs.twimg.com/profile_images/1455185376876826625/s1AjSxph_400x400.jpg",
+          "fav": false
+        },
+        {
+          "name": "Amazon",
+          "cmpShort": "AMZN",
+          "pValue": "$99.775 B",
+          "pStat": "3.17%",
+          "cLogo": "https://scontent.fblr4-3.fna.fbcdn.net/v/t1.6435-9/128008893_102621075039706_6722804550333589665_n.png?stp=dst-png_p240x240&_nc_cat=111&ccb=1-5&_nc_sid=dd9801&_nc_ohc=Hujdj3-0wq8AX-k254E&_nc_ht=scontent.fblr4-3.fna&oh=00_AT-TollaL2aCJ8wLQ332l835enBsU71kH9fSR24j4kX1lg&oe=6297027C",
+          "fav": true
+        }
+      ]
+    },
+    {
+      "name": "HealthCare Trade",
+      "pValue": 8.3,
+      "totalType": "T",
+      "pStat": "4.23%",
+      "fav": false,
+      "groupDescription": "HealthCare Portfolio",
+      "companyInfo": [
+        {
+          "name": "Apple",
+          "cmpShort": "AAPL",
+          "pValue": "$2.775 T",
+          "pStat": "2.23%",
+          "cLogo": "https://1000logos.net/wp-content/uploads/2019/06/Apple-Logo-100x63.jpg",
+          "fav": true
+        },
+        {
+          "name": "Microsoft",
+          "cmpShort": "MFST",
+          "pValue": "$2.775 T",
+          "pStat": "1.47%",
+          "cLogo": "https://yt3.ggpht.com/ytc/AKedOLRWrisdne6s62jFSEqac07vG0wP_XT5m7hawTUHTA=s176-c-k-c0x00ffffff-no-rj",
+          "fav": true
+        }
+      ]
+    },
+    {
+      "name": "Travel Agency Trade",
+      "pValue": 0.3,
+      "totalType": "T",
+      "pStat": "1.09%",
+      "fav": false,
+      "groupDescription": "Travel Portfolio",
+      "companyInfo": [
+        {
+          "name": "Apple",
+          "cmpShort": "AAPL",
+          "pValue": "$2.775 T",
+          "pStat": "2.23%",
+          "cLogo": "https://1000logos.net/wp-content/uploads/2019/06/Apple-Logo-100x63.jpg",
+          "fav": true
+        },
+        {
+          "name": "Microsoft",
+          "cmpShort": "MFST",
+          "pValue": "$2.775 T",
+          "pStat": "1.47%",
+          "cLogo": "https://yt3.ggpht.com/ytc/AKedOLRWrisdne6s62jFSEqac07vG0wP_XT5m7hawTUHTA=s176-c-k-c0x00ffffff-no-rj",
+          "fav": true
+        }
+      ]
+    },
+    {
+      "name": "Export Trade",
+      "pValue": 2.3,
+      "totalType": "T",
+      "pStat": 1.03,
+      "fav": true,
+      "groupDescription": "Export Portfolio",
+      "companyInfo": [
+        {
+          "name": "Apple",
+          "cmpShort": "AAPL",
+          "pValue": "$2.775 T",
+          "pStat": "2.23%",
+          "cLogo": "https://1000logos.net/wp-content/uploads/2019/06/Apple-Logo-100x63.jpg",
+          "fav": true
+        },
+        {
+          "name": "Microsoft",
+          "cmpShort": "MFST",
+          "pValue": "$2.775 T",
+          "pStat": "1.47%",
+          "cLogo": "https://yt3.ggpht.com/ytc/AKedOLRWrisdne6s62jFSEqac07vG0wP_XT5m7hawTUHTA=s176-c-k-c0x00ffffff-no-rj",
+          "fav": true
+        }
+      ]
+    },
+    {
+      "name": "Software Company Trade",
+      "pValue": 5.3,
+      "totalType": "T",
+      "pStat": "9.23%",
+      "fav": true,
+      "groupDescription": "Software Company Portfolio",
+      "companyInfo": [
+        {
+          "name": "Apple",
+          "cmpShort": "AAPL",
+          "pValue": "$2.775 T",
+          "pStat": "2.23%",
+          "cLogo": "https://1000logos.net/wp-content/uploads/2019/06/Apple-Logo-100x63.jpg",
+          "fav": true
+        },
+        {
+          "name": "Microsoft",
+          "cmpShort": "MFST",
+          "pValue": "$2.775 T",
+          "pStat": "1.47%",
+          "cLogo": "https://yt3.ggpht.com/ytc/AKedOLRWrisdne6s62jFSEqac07vG0wP_XT5m7hawTUHTA=s176-c-k-c0x00ffffff-no-rj",
+          "fav": true
+        }
+      ]
+    }
+  ]
+}

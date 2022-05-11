@@ -18,7 +18,7 @@ const CardComponent = props => {
               <div>{company?.cmpShort}</div>
             </Col>
             <img src={company?.cLogo} alt="logo" className="smallImage" width="100px" />
-            <Col sm={6}>{company?.pValue}</Col>
+            <Col sm={6}>${company?.pValue} {company?.pType}</Col>
             <Col sm={6} className="statColor" >{company?.pStat}</Col>
           </Row>
     
