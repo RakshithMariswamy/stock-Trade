@@ -1,21 +1,41 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import PreferenceComponent from "./preference"
 import { Container, Row, Col, Table } from "react-bootstrap"
 import GroupTableRow from "./groupTableRow"
-import GroupComanyMock from "../mock/group.json"
+import { useDispatch, useSelector } from "react-redux"
 
 const GroupComponent = props => {
-  const GroupMockInfo = GroupComanyMock.groupInfo
-  const [groupData, setGroupData] = useState(GroupMockInfo)
+  const dispatch = useDispatch()
+  const { groupList } = useSelector(st => st.customReduceData)
+  const [groupData, setGroupData] = useState([])
+  const apiCallGroup = async () => {
+    const url = `/.netlify/functions/group`
+    try {
+      const response = await fetch(url)
+      const data = await response.json()
+      dispatch({ type: "GroupInfo", payload: data })
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  useEffect(() => {
+    setGroupData(groupList)
+  }, [groupList])
+
+  useEffect(() => {
+    apiCallGroup()
+  }, [])
+
   const searchByName = e => {
-    const filterData = GroupMockInfo.filter(item =>
+    const filterData = groupList.filter(item =>
       item.groupName.includes(e.target.value)
     )
     setGroupData([...filterData])
   }
   const sortBy = e => {
     const value = e.target.value
-    const sortByData = GroupMockInfo.sort((x, y) =>
+    const sortByData = groupList.sort((x, y) =>
       x[value] < y[value] ? -1 : x[value] > y[value] ? 1 : 0
     )
     setGroupData([...sortByData])
@@ -25,9 +45,9 @@ const GroupComponent = props => {
     const value = e.target.value
     const filterData =
       value === "0"
-        ? GroupMockInfo
-        : GroupMockInfo.filter(item => (value === "1" ? item.fav : !item.fav))
-        setGroupData([...filterData])
+        ? groupList
+        : groupList.filter(item => (value === "1" ? item.fav : !item.fav))
+    setGroupData([...filterData])
   }
   return (
     <>
