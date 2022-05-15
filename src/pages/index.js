@@ -20,32 +20,32 @@ const IndexPage = () => {
   return (
     <>
       {isBrowser && (
-        <div>
-          <Header
-            siteTitle="Stock Trade"
-            userName={msalInstance?.account?.userName}
-            isLogedIn={msalInstance}
-            logoutHandler={logoutHandler}
-          />
-          {msalInstance && <DashBoard />}
-          {!msalInstance && (
-            <>
-              <Card className="text-center loginCard">
-                <Card.Body>
-                  <Card.Title>Welcome Stock Trade Application</Card.Title>
-                  <Card.Text>
-                    Please Login by Micrsoft Login Authenticator to use
-                    Application
-                  </Card.Text>
-                  <MicrosoftLogin
-                    clientId={"955997a3-35fa-4058-9dc8-7e087c8143f5"}
-                    authCallback={loginHandler}
-                  />
-                </Card.Body>
-              </Card>
-            </>
-          )}
-        </div>
+          <div>
+            <Header
+              siteTitle="Stock Trade"
+              userName={msalInstance?.account?.userName}
+              isLogedIn={msalInstance}
+              logoutHandler={logoutHandler}
+            />
+            {msalInstance && <DashBoard />}
+            {!msalInstance && (
+              <>
+                <Card className="text-center loginCard">
+                  <Card.Body>
+                    <Card.Title>Welcome Stock Trade Application</Card.Title>
+                    <Card.Text>
+                      Please Login by Micrsoft Login Authenticator to use
+                      Application
+                    </Card.Text>
+                    <MicrosoftLogin
+                      clientId={"955997a3-35fa-4058-9dc8-7e087c8143f5"}
+                      authCallback={loginHandler}
+                    />
+                  </Card.Body>
+                </Card>
+              </>
+            )}
+          </div>
       )}
     </>
   )

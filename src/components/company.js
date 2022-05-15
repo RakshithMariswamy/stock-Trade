@@ -2,36 +2,41 @@ import React, { useState, useEffect } from "react"
 import PreferenceComponent from "./preference"
 import { Container, Row, Col } from "react-bootstrap"
 import CardComponent from "./card"
+import { useDispatch, useSelector } from "react-redux"
 
-const CompanyComponent = props => {
+const CompanyComponent = (props) => {
+  const dispatch = useDispatch()
+  const { customerList } = useSelector(st => st.customReduceData)
   const [companyData, setCompanyData] = useState([])
   const searchByName = e => {
-    const filterData = companyData.filter(item =>
+    const filterData = customerList.filter(item =>
       item.name.includes(e.target.value)
     )
     setCompanyData([...filterData])
   }
 
-  const apiCall = async(parameter) =>{
-    //`/.netlify/functions/company`
-    // `http://localhost:8888/.netlify/functions/company`
-    const url = `/.netlify/functions/company`;
+  const apiCallCustomer = async() => {
+    const url = `/.netlify/functions/company`
     try {
-        const response = await fetch(url);
-        const data = await response.json();
-        setCompanyData(data)
+      const response = await fetch(url)
+      const data = await response.json()
+      dispatch({ type: "CustomerInfo", payload: data })
     } catch (err) {
-        console.log(err);
+      console.log(err)
     }
-}
+  }
 
-useEffect(()=>{
-  apiCall()
-},[])
+  useEffect(()=>{
+    setCompanyData(customerList)
+  },[customerList])
+
+  useEffect(() => {
+    apiCallCustomer()
+  },[])
 
   const sortBy = e => {
     const value = e.target.value
-    const sortByData = companyData.sort((x, y) =>
+    const sortByData = customerList.sort((x, y) =>
       x[value] < y[value] ? -1 : x[value] > y[value] ? 1 : 0
     )
     setCompanyData([...sortByData])
@@ -41,8 +46,8 @@ useEffect(()=>{
     const value = e.target.value
     const filterData =
       value === "0"
-        ? companyData
-        : companyData.filter(item => (value === "1" ? item.fav : !item.fav))
+        ? customerList
+        : customerList.filter(item => (value === "1" ? item.fav : !item.fav))
     setCompanyData([...filterData])
   }
   return (
