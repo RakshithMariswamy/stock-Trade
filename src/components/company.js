@@ -2,25 +2,24 @@ import React, { useState, useEffect } from "react"
 import PreferenceComponent from "./preference"
 import { Container, Row, Col } from "react-bootstrap"
 import CardComponent from "./card"
-import CompanyMock from "../mock/company.json"
 
 const CompanyComponent = props => {
-  const companyMockInfo = CompanyMock.companyInfo
-  const [companyData, setCompanyData] = useState(companyMockInfo)
+  const [companyData, setCompanyData] = useState([])
   const searchByName = e => {
-    const filterData = companyMockInfo.filter(item =>
+    const filterData = companyData.filter(item =>
       item.name.includes(e.target.value)
     )
     setCompanyData([...filterData])
   }
 
   const apiCall = async(parameter) =>{
+    //`/.netlify/functions/company`
     // `http://localhost:8888/.netlify/functions/company`
-    const url = `/.netlify/functions/company`;
+    const url = `http://localhost:8888/.netlify/functions/company`;
     try {
         const response = await fetch(url);
         const data = await response.json();
-        return data;
+        setCompanyData(data)
     } catch (err) {
         console.log(err);
     }
@@ -32,7 +31,7 @@ useEffect(()=>{
 
   const sortBy = e => {
     const value = e.target.value
-    const sortByData = companyMockInfo.sort((x, y) =>
+    const sortByData = companyData.sort((x, y) =>
       x[value] < y[value] ? -1 : x[value] > y[value] ? 1 : 0
     )
     setCompanyData([...sortByData])
@@ -42,8 +41,8 @@ useEffect(()=>{
     const value = e.target.value
     const filterData =
       value === "0"
-        ? companyMockInfo
-        : companyMockInfo.filter(item => (value === "1" ? item.fav : !item.fav))
+        ? companyData
+        : companyData.filter(item => (value === "1" ? item.fav : !item.fav))
     setCompanyData([...filterData])
   }
   return (
