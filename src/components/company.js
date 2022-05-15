@@ -15,6 +15,7 @@ const CompanyComponent = props => {
   }
 
   const apiCall = async(parameter) =>{
+    // `http://localhost:8888/.netlify/functions/company`
     const url = `/.netlify/functions/company`;
     try {
         const response = await fetch(url);
