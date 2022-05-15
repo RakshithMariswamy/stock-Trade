@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import PreferenceComponent from "./preference"
 import { Container, Row, Col } from "react-bootstrap"
 import CardComponent from "./card"
@@ -13,6 +13,21 @@ const CompanyComponent = props => {
     )
     setCompanyData([...filterData])
   }
+
+  const apiCall = async(parameter) =>{
+    const url = `/.netlify/functions/company`;
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+useEffect(()=>{
+  apiCall()
+},[])
 
   const sortBy = e => {
     const value = e.target.value
