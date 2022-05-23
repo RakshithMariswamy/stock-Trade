@@ -17,8 +17,12 @@ const CompanyComponent = (props) => {
 
   const apiCallCustomer = async() => {
     const url = `/.netlify/functions/company`
+    const companyURL = 'https://stock-app-priyesh-heroku.herokuapp.com/stock'
     try {
       const response = await fetch(url)
+      const response1 = await fetch(companyURL)
+      console.log('*****')
+      console.log(response1)
       const data = await response.json()
       dispatch({ type: "CustomerInfo", payload: data })
     } catch (err) {
