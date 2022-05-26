@@ -29,7 +29,7 @@ const GroupComponent = props => {
 
   const searchByName = e => {
     const filterData = groupList.filter(item =>
-      item.symbol.includes(e.target.value)
+      item.symbol.toLowerCase().includes(e.target.value.toLowerCase())
     )
     setGroupData([...filterData])
   }
