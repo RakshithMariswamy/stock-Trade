@@ -52,6 +52,7 @@ const CompanyComponent = (props) => {
         : customerList.filter(item => (value === "1" ? item.fav : !item.fav))
     setCompanyData([...filterData])
   }
+  console.log(companyData)
   return (
     <>
       <div>
