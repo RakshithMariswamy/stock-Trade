@@ -10,7 +10,7 @@ const CompanyComponent = props => {
   const [companyData, setCompanyData] = useState([])
   const searchByName = e => {
     const filterData = customerList.filter(item =>
-      item.name.includes(e.target.value)
+      item.symbol.includes(e.target.value)
     )
     setCompanyData([...filterData])
   }
