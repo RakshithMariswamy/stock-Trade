@@ -1,8 +1,8 @@
 {
   "groupInfo": [
     {
-      "name": "Banking Trade",
-      "pValue": 3.3,
+      "symbol": "Banking Trade",
+      "totalTradedValue": 3.3,
       "totalType": "T",
       "pStat": "2.23%",
       "fav": false,
@@ -65,8 +65,8 @@
       ]
     },
     {
-      "name": "Insurance Trade",
-      "pValue": 1.3,
+      "symbol": "Insurance Trade",
+      "totalTradedValue": 1.3,
       "totalType": "T",
       "pStat": "-0.13%",
       "fav": true,
@@ -111,8 +111,8 @@
       ]
     },
     {
-      "name": "HealthCare Trade",
-      "pValue": 8.3,
+      "symbol": "HealthCare Trade",
+      "totalTradedValue": 8.3,
       "totalType": "T",
       "pStat": "4.23%",
       "fav": false,
@@ -157,8 +157,8 @@
       ]
     },
     {
-      "name": "Travel Agency Trade",
-      "pValue": 0.3,
+      "symbol": "Travel Agency Trade",
+      "totalTradedValue": 0.3,
       "totalType": "T",
       "pStat": "1.09%",
       "fav": false,
@@ -203,8 +203,8 @@
       ]
     },
     {
-      "name": "Export Trade",
-      "pValue": 2.3,
+      "symbol": "Export Trade",
+      "totalTradedValue": 2.3,
       "totalType": "T",
       "pStat": 1.03,
       "fav": true,
@@ -249,8 +249,8 @@
       ]
     },
     {
-      "name": "Software Company Trade",
-      "pValue": 5.3,
+      "symbol": "Software Company Trade",
+      "totalTradedValue": 5.3,
       "totalType": "T",
       "pStat": "9.23%",
       "fav": true,

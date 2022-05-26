@@ -22,10 +22,10 @@ const GroupTableRow = props => {
       >
         <td>
           {expandCol ? <AiFillCaretUp /> : <AiFillCaretDown />}{" "}
-          {group.name}
+          {group.symbol}
         </td>
         <td>{group.groupDescription}</td>
-        <td>${group.pValue} {group.totalType}</td>
+        <td>${group.totalTradedValue} {group.totalType}</td>
         <td>{group.pStat}</td>
         <td>{group.fav ? <AiFillStar /> : <AiOutlineStar />}</td>
       </tr>
@@ -33,7 +33,7 @@ const GroupTableRow = props => {
         <tr class="fold">
           <td colspan="7">
             <div class="fold-content">
-              <h3>{group.name}</h3>
+              <h3>{group.symbol}</h3>
               <p>{group.groupDescription}</p>
               <Container fluid>
                 <Row>
