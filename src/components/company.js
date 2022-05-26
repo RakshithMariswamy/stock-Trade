@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap"
 import CardComponent from "./card"
 import { useDispatch, useSelector } from "react-redux"
 
-const CompanyComponent = (props) => {
+const CompanyComponent = props => {
   const dispatch = useDispatch()
   const { customerList } = useSelector(st => st.customReduceData)
   const [companyData, setCompanyData] = useState([])
@@ -15,26 +15,25 @@ const CompanyComponent = (props) => {
     setCompanyData([...filterData])
   }
 
-  const apiCallCustomer = async() => {
+  const apiCallCustomer = async () => {
     const url = `/.netlify/functions/company`
-    
+
     try {
       const response = await fetch(url)
       const responsedata = await response.json()
-      console.log(data)
       dispatch({ type: "CustomerInfo", payload: responsedata.data })
     } catch (err) {
       console.log(err)
     }
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     setCompanyData(customerList)
-  },[customerList])
+  }, [customerList])
 
   useEffect(() => {
     apiCallCustomer()
-  },[])
+  }, [])
 
   const sortBy = e => {
     const value = e.target.value
