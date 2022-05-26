@@ -12,11 +12,11 @@ const CardComponent = props => {
   return (
     <Card className="card-main">
       <Card.Header className="batch-table-head">
-        {company?.name} {company?.fav ? <AiFillStar /> : <AiOutlineStar />}
+        {company?.symbol} {company?.fav ? <AiFillStar /> : <AiOutlineStar />}
       </Card.Header>
       <Card.Body className="cardBody">
         <Row>
-          <Col sm={6}>
+          <Col sm={12}>
             <b>{company?.identifier}</b>
             <div>{company?.symbol}</div>
           </Col>
@@ -24,28 +24,28 @@ const CardComponent = props => {
             placement="top"
             overlay={renderTooltip("Total traded value")}
           >
-            <Col sm={6}>TTV : ${company?.totalTradedValue} </Col>
+            <Col sm={6}>TTV : {company?.totalTradedValue} </Col>
           </OverlayTrigger>
           <OverlayTrigger placement="top" overlay={renderTooltip("Open")}>
-            <Col sm={6} className="statColor">
+            <Col sm={6} >
               open : {company?.open}
             </Col>
           </OverlayTrigger>
           <OverlayTrigger placement="top" overlay={renderTooltip("Day High")}>
-            <Col sm={6} className="statColor">
+            <Col sm={6} >
               DH : {company?.dayHigh}
             </Col>
           </OverlayTrigger>
           <OverlayTrigger placement="top" overlay={renderTooltip("Day Low")}>
-            <Col sm={6}>DL : ${company?.dayLow} </Col>
+            <Col sm={6}>DL : {company?.dayLow} </Col>
           </OverlayTrigger>
           <OverlayTrigger placement="top" overlay={renderTooltip("Year High")}>
-            <Col sm={6} className="statColor">
+            <Col sm={6} >
               YH : {company?.yearHigh}
             </Col>
           </OverlayTrigger>
           <OverlayTrigger placement="top" overlay={renderTooltip("Year Low")}>
-            <Col sm={6} className="statColor">
+            <Col sm={6} >
               YL : {company?.yearLow}
             </Col>
           </OverlayTrigger>
