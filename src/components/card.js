@@ -8,6 +8,19 @@ import Tooltip from "react-bootstrap/Tooltip"
 const CardComponent = props => {
   const { company } = props
 
+  const nFormatter = (num) => {
+    if (num >= 1000000000) {
+       return (num / 1000000000).toFixed(1).replace(/\.0$/, '') + 'G';
+    }
+    if (num >= 1000000) {
+       return (num / 1000000).toFixed(1).replace(/\.0$/, '') + 'M';
+    }
+    if (num >= 1000) {
+       return (num / 1000).toFixed(1).replace(/\.0$/, '') + 'K';
+    }
+    return num;
+}
+
   const renderTooltip = message => <Tooltip {...props}>{message}</Tooltip>
   return (
     <Card className="card-main">
@@ -24,7 +37,7 @@ const CardComponent = props => {
             placement="top"
             overlay={renderTooltip("Total traded value")}
           >
-            <Col sm={6}>TTV : {company?.totalTradedValue} </Col>
+            <Col sm={6}>TTV : {nFormatter(company?.totalTradedValue)} </Col>
           </OverlayTrigger>
           <OverlayTrigger placement="top" overlay={renderTooltip("Open")}>
             <Col sm={6} >
