@@ -1,6 +1,7 @@
 exports.handler = async function (event, context) {
   try{
     const companyURL = 'https://stock-app-priyesh-heroku.herokuapp.com/stock'
+    console.log(companyURL)
      const response = await fetch(companyURL)
      const data = await response.json();
      console.log(data);
@@ -11,5 +12,4 @@ exports.handler = async function (event, context) {
   } catch(err){
     console.log(err)
   }
-  
   }
