@@ -20,9 +20,9 @@ const CompanyComponent = (props) => {
     
     try {
       const response = await fetch(url)
-      const data = await response.json()
+      const responsedata = await response.json()
       console.log(data)
-      dispatch({ type: "CustomerInfo", payload: data })
+      dispatch({ type: "CustomerInfo", payload: responsedata.data })
     } catch (err) {
       console.log(err)
     }
