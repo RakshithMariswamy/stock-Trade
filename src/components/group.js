@@ -49,6 +49,7 @@ const GroupComponent = props => {
         : groupList.filter(item => (value === "1" ? item.fav : !item.fav))
     setGroupData([...filterData])
   }
+  console.log(groupData)
   return (
     <>
       <div>
