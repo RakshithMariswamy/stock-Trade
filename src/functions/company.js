@@ -1,5 +1,4 @@
 exports.handler = async function (event, context) {
-  try{
     const companyURL = 'https://stock-app-priyesh-heroku.herokuapp.com/stock'
     console.log(companyURL)
      const response = await fetch(companyURL)
@@ -9,7 +8,4 @@ exports.handler = async function (event, context) {
          statusCode: 200,
          body: JSON.stringify({data})
      }
-  } catch(err){
-    console.log(err)
-  }
   }
