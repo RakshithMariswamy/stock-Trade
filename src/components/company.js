@@ -34,7 +34,7 @@ const CompanyComponent = (props) => {
 
   useEffect(() => {
     apiCallCustomer()
-  })
+  },[])
 
   const sortBy = e => {
     const value = e.target.value
