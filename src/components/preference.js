@@ -30,7 +30,7 @@ const PreferenceComponent = (props) => {
             <option>Select to Sort</option>
             <option value="name">Sort By Name</option>
             <option value="fav">Sort By Fav</option>
-            <option value="pValue">Sort By Total Value</option>
+            <option value="totalTradedValue">Sort By Total Value</option>
       </Form.Select>
       </Col>
       <Col xs={3}>
